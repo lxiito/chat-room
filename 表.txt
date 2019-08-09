@@ -1,0 +1,13 @@
+drop table if exists admin;
+create table amdin(
+id int auto_increment PRIMARY key  comment "管理员id",
+username varchar(20) not null comment "管理员名",
+`password` varchar(10) not null comment "管理员密码",
+role_id tinyint unsigned default 0 comment "权限id",
+`email` varchar(20) null comment "邮箱",
+`phone` tinyint unsigned null comment "手机号",
+create_time int UNSIGNED not null comment "创建时间",
+update_time int UNSIGNED not null comment "更新时间",
+delete_time int UNSIGNED not null comment "删除时间",
+last_login_time int UNSIGNED null comment "最后登录时间"
+)ENGINE=INNODB , charset=utf8
